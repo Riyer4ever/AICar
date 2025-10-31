@@ -1,5 +1,5 @@
 // include some head files
-#include "ServoTimer2.h"            // Third-party servo library
+#include <Servo.h>            // Third-party servo library
 #include "Wire.h"                   // I2C library for tracking, color recognition, and ultrasonic detection
 #include "MH_TCS34725.h"            // Color sensor library
 
@@ -13,19 +13,25 @@
 MH_TCS34725 tcs = MH_TCS34725(TCS34725_INTEGRATIONTIME_50MS, TCS34725_GAIN_16X); 
 
 // define servo pin
-ServoTimer2 servo_pin_11;           // Horizontal servo (controls robotic arm rotation in horizontal plane)
-ServoTimer2 servo_pin_3;            // Gripper servo (controls gripper open and close)
-ServoTimer2 servo_pin_12;           // Lift servo (controls robotic arm up and down)
+Servo myservo;
 
 
 // function of initilization
 void setup()
 {
-
+    myservo.attach(8);
+    myservo.write(90);
 }
 
 // function of loop program
 void loop()
 {
-
+    // myservo.write(0);
+    // delay(2000);
+    // myservo.write(90);
+    // delay(2000);
+    // myservo.write(180);
+    // delay(2000);
+    // myservo.write(90);
+    // delay(2000);
 }
