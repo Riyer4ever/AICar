@@ -21,6 +21,7 @@ void setup()
 {
     myservo.attach(8);
     myservo.write(90);
+
 }
 
 // function of loop program
