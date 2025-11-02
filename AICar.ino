@@ -47,13 +47,10 @@ void setup() {
     servo_pin_3.write(1400);  // arm servo initial
     servo_pin_12.write(1900); // tray servo
     delay(700);
-    servo_pin_3.write(700);   // move arm
-    delay(700);               // wait ~1s
-    servo_pin_12.write(20);   // move tray
+    servo_pin_3.write(400);
     delay(500);
-    Serial.begin(9600);       // Serial output for debugging
+    Serial.begin(9600);
 }
-
 void loop() {
     int a = analogRead(A0);
     int b = analogRead(A2);
@@ -287,7 +284,7 @@ void stopMotors() {
 }
 
 void Speedup() {
-    analogWrite(10, 140);
+    analogWrite(10, 120);
     analogWrite(9, 0);
     analogWrite(6, 255);
     analogWrite(5, 0);

@@ -1,6 +1,6 @@
 {
     "board": "arduino:avr:uno",
-    "sketch": "AICar\\AICar.ino",
+    "sketch": "AICar.ino",
     "port": "COM3",
     "programmer": "arduino:avrispmkii"
 }
